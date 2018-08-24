@@ -1,0 +1,116 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Differentiator (3.0.2)
+  - Nimble (7.1.3)
+  - OHHTTPStubs/Core (6.1.0)
+  - OHHTTPStubs/Default (6.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.1.0)
+  - OHHTTPStubs/Swift (6.1.0):
+    - OHHTTPStubs/Default
+  - Realm (3.7.4):
+    - Realm/Headers (= 3.7.4)
+  - Realm/Headers (3.7.4)
+  - RealmSwift (3.7.4):
+    - Realm (= 3.7.4)
+  - RxAlamofire (4.2.0):
+    - RxAlamofire/Core (= 4.2.0)
+  - RxAlamofire/Core (4.2.0):
+    - Alamofire (~> 4.5)
+    - RxSwift (~> 4)
+  - RxBlocking (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxCodable (0.3.0):
+    - RxCodable/Core (= 0.3.0)
+  - RxCodable/Core (0.3.0):
+    - RxSwift (>= 4.0.0-beta.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxNimble (4.1.0):
+    - Nimble (~> 7.0)
+    - RxBlocking (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxOptional (3.5.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxRealm (0.7.5):
+    - RealmSwift (~> 3.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+  - RxTest (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxViewController (0.3.0):
+    - RxCocoa (>= 4.0.0)
+    - RxSwift (>= 4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Nimble
+  - OHHTTPStubs/Swift
+  - Realm
+  - RealmSwift
+  - RxAlamofire
+  - RxBlocking (~> 4.0)
+  - RxCocoa (~> 4.0)
+  - RxCodable
+  - RxDataSources
+  - RxNimble
+  - RxOptional
+  - RxRealm
+  - RxSwift (~> 4.0)
+  - RxTest (~> 4.0)
+  - RxViewController
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Differentiator
+    - Nimble
+    - OHHTTPStubs
+    - Realm
+    - RealmSwift
+    - RxAlamofire
+    - RxBlocking
+    - RxCocoa
+    - RxCodable
+    - RxDataSources
+    - RxNimble
+    - RxOptional
+    - RxRealm
+    - RxSwift
+    - RxTest
+    - RxViewController
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  Nimble: 2839b01d1b31f6a6a7777a221f0d91cf52e8e27b
+  OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
+  Realm: a469bb59e33f9926102ccaea4349822c53b9117e
+  RealmSwift: a45861b21c180f5cf0f122144b9759fa8dde3e9e
+  RxAlamofire: 87a9c588541210cc3e4a1f843ccc3ecf3eb98b31
+  RxBlocking: e339d8a6e752e25ade95ff858466c55436668f59
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxCodable: 12d41ab0ba58f455cfc83965fcc927ac4bad3e7f
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxNimble: e5a34bf3b18d85406fc2a6e2cbc73aa2b4a858f0
+  RxOptional: bd32ff8ca9df4177683d56ffeb618a9d4d5d5cad
+  RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
+  RxViewController: 203510707e73dd95f147f0c387710e3ec80d2b0f
+
+PODFILE CHECKSUM: de1103b8473b1dda8339912f70d2db5403b2542d
+
+COCOAPODS: 1.5.3
