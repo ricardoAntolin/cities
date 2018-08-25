@@ -9,26 +9,29 @@
 import RxSwift
 import Realm
 import RealmSwift
+import Data
 
-final class CityRealmDataRepository {
-    let realmDataProvider: RMDataProvider<RMCity>
+public final class CityRealmDataRepository: LocalCityDataStore {
+    private let realmDataProvider: RMDataProvider<RMCity>
     
-    init(realm: Realm, scheduler: ImmediateSchedulerType) {
+    public init(realm: Realm, scheduler: ImmediateSchedulerType) {
         self.realmDataProvider = RMDataProvider<RMCity>(realm: realm, scheduler: scheduler)
     }
     
-    func storeCities(_ cities: [RMCity]) -> Completable {
+    public func storeCities(_ cities: [CityEntity]) -> Completable {
         return realmDataProvider
-            .save(entity: cities)
+            .save(entity: cities.map{ $0.asRealm() })
     }
     
-    func findAllCities() -> Observable<[RMCity]>{
+    public func findAllCities() -> Observable<[CityEntity]>{
         return realmDataProvider
             .queryAll()
+            .map({ $0.map{ $0.asDataEntity() } })
     }
     
-    func findCitiesByNameLike(_ searchString: String) -> Observable<[RMCity]> {
+    public func findCitiesByNameLike(_ searchString: String) -> Observable<[CityEntity]> {
         return realmDataProvider
             .query(with: NSPredicate(format: "\(RMCity.Keys.name) CONTAINS %@", searchString))
+            .map({ $0.map{ $0.asDataEntity() } })
     }
 }

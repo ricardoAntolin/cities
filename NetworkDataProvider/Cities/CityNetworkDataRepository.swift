@@ -9,18 +9,19 @@
 import RxAlamofire
 import RxSwift
 import RxCodable
+import Data
 
-final class CityNetworkDataRepository {
+public final class CityNetworkDataRepository: RemoteCityDataStore {
     private let nwDataProvider: NWDataProvider<NWSearchResponse>
     private let path = "city"
     
-    init(baseURL: String){
+    public init(baseURL: String){
         self.nwDataProvider = NWDataProvider(baseURL)
     }
     
-    func searchCities(includeCountry: Bool,
+    public func searchCities(includeCountry: Bool,
                              page: Int,
-                             searchString: String?) -> Single<NWSearchResponse> {
+                             searchString: String?) -> Single<PageableListEntity<CityEntity>> {
         var params: [String: Any] = ["page": page]
         
         if includeCountry {
@@ -31,6 +32,6 @@ final class CityNetworkDataRepository {
             params["filter[0][name][contains]"] = filter
         }
         
-        return nwDataProvider.getItem(path)
+        return nwDataProvider.getItem(path).map { $0.asDataEntity() }
     }
 }

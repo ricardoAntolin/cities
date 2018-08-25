@@ -10,6 +10,8 @@ import XCTest
 import RxSwift
 import RxBlocking
 import OHHTTPStubs
+import Nimble
+import Data
 @testable import NetworkDataProvider
 
 class CityNetworkDataRepositoryTests: XCTestCase {
@@ -41,35 +43,33 @@ class CityNetworkDataRepositoryTests: XCTestCase {
             .toBlocking()
             .first()!
         
-        XCTAssertEqual(result, ExpectedResults.searchResult)
+        expect(result).to(equal(ExpectedResults.searchResult))
     }
 }
 
 struct ExpectedResults {
-    static let searchResult = NWSearchResponse(
-        data: NWData(
-            items: [NWCity(
-                id: 1,
-                name: "Kabul",
-                lat: 34.5166667,
-                lng: 69.1833344,
+    static let searchResult = PageableListEntity(
+        items: [CityEntity(
+            id: 1,
+            name: "Kabul",
+            lat: 34.5166667,
+            lng: 69.1833344,
+            createdAt: getDate(date: "2018-01-07 17:08:01"),
+            updatedAt: getDate(date: "2018-04-12 21:37:25"),
+            countryId: 2,
+            country: CountryEntity(
+                id: 2,
+                name: "Afghanistan",
+                code: "AFG",
                 createdAt: getDate(date: "2018-01-07 17:08:01"),
-                updatedAt: getDate(date: "2018-04-12 21:37:25"),
-                countryId: 2,
-                country: NWCountry(
-                    id: 2,
-                    name: "Afghanistan",
-                    code: "AFG",
-                    createdAt: getDate(date: "2018-01-07 17:08:01"),
-                    updatedAt: getDate(date: "2018-01-07 17:08:01"),
-                    continentId: 1)
-                )],
-            pagination: NWPagination(
-                currentPage: 1,
-                lastPage: 272,
-                perPage: 15,
-                total: 4079)),
-        time: 1534842856)
+                updatedAt: getDate(date: "2018-01-07 17:08:01"),
+                continentId: 1)
+            )],
+        
+        currentPage: 1,
+        lastPage: 272,
+        perPage: 15,
+        total: 4079)
     
     private static func getDate(date: String) -> Date {
         let dateFormatter = DateFormatter()

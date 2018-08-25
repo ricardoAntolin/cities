@@ -8,6 +8,6 @@
 
 import RxSwift
 
-public protocol RemoteDataStore {
+public protocol RemoteCityDataStore {
     func searchCities(includeCountry: Bool, page: Int, searchString: String?) -> Single<PageableListEntity<CityEntity>>
 }

@@ -6,34 +6,39 @@
 //  Copyright © 2018 rantolin. All rights reserved.
 //
 import RxSwift
+import Domain
 
-final class CityDataRepository {
-    let localDataStore: LocalDataStore
-    let remoteDataStore: RemoteDataStore
+public final class CityDataRepository: CityRepository {
+    let localDataStore: LocalCityDataStore
+    let remoteDataStore: RemoteCityDataStore
     
-    init(localDataStore: LocalDataStore,
-         remoteDataStore: RemoteDataStore){
+    public init(localDataStore: LocalCityDataStore,
+                remoteDataStore: RemoteCityDataStore){
         self.localDataStore = localDataStore
         self.remoteDataStore = remoteDataStore
     }
     
-    func findAllCities() -> Observable<[CityEntity]> {
+    public func findAllCities() -> Observable<[City]> {
         return localDataStore.findAllCities()
+            .map{ $0.map{ $0.asDomainModel() } }
     }
     
-    func storeCities(_ cities: [CityEntity]) -> Completable{
-        return localDataStore.storeCities(cities)
+    public func storeCities(_ cities: [City]) -> Completable{
+        return localDataStore.storeCities(cities.map{ $0.asDataEntity() })
     }
     
-    func findCitiesByNameLike(_ searchString: String) -> Observable<[CityEntity]> {
+    public func findCitiesByNameLike(_ searchString: String) -> Observable<[City]> {
         return localDataStore.findCitiesByNameLike(searchString)
+            .map{ $0.map{ $0.asDomainModel() } }
     }
     
-    func updateCitiesByPage(page: Int) -> Single<PageableListEntity<CityEntity>> {
+    public func updateCitiesByPage(_ page: Int) -> Single<PageableList<City>> {
         return remoteDataStore.searchCities(includeCountry: true, page: page, searchString: nil)
+            .map{ $0.asDomainModel() }
     }
     
-    func updateCitiesByNameLike(page: Int, searchString: String) -> Single<PageableListEntity<CityEntity>> {
+    public func updateCitiesByNameLike(page: Int, searchString: String) -> Single<PageableList<City>> {
         return remoteDataStore.searchCities(includeCountry: true, page: page, searchString: searchString)
+            .map{ $0.asDomainModel() }
     }
 }

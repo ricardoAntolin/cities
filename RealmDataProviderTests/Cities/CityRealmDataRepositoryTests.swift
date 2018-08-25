@@ -12,6 +12,7 @@ import RxBlocking
 import Realm
 import RealmSwift
 import Nimble
+import Data
 @testable import RealmDataProvider
 
 class CityRealmRepositoryTests: XCTestCase {
@@ -25,9 +26,9 @@ class CityRealmRepositoryTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        cityRealmRepository = CityRealmRepository(realm: realm, scheduler: scheduler)
+        cityRealmRepository = CityRealmDataRepository(realm: realm, scheduler: scheduler)
         try! realm.write {
-            realm.add(createTwoCities())
+            realm.add(createTwoCities().map { $0.asRealm() })
         }
     }
     
@@ -63,27 +64,27 @@ class CityRealmRepositoryTests: XCTestCase {
         expect(result).to(haveCount(1))
     }
     
-    private func createOneCity(id: Int = 0, name: String = "Qandahar") -> RMCity {
-        return RMCity.build { (expectCity: RMCity) in
-            expectCity.id = id
-            expectCity.name = name
-            expectCity.lat = 34.5166667
-            expectCity.lng = 69.1833344
-            expectCity.createdAt = getDate(date: "2018-01-07 17:08:01")
-            expectCity.updatedAt = getDate(date: "2018-04-12 21:37:25")
-            expectCity.countryId = 2
-            expectCity.country = RMCountry.build { (expectCountry: RMCountry) in
-                expectCountry.id = 2
-                expectCountry.name = "Afghanistan"
-                expectCountry.code = "AFG"
-                expectCountry.createdAt = getDate(date: "2018-01-07 17:08:01")
-                expectCountry.updatedAt = getDate(date: "2018-01-07 17:08:01")
-                expectCountry.continentId = 1
-            }
-        }
+    private func createOneCity(id: Int = 0, name: String = "Qandahar") -> CityEntity {
+        return CityEntity(
+            id: id,
+            name: name,
+            lat: 34.5166667,
+            lng: 69.1833344,
+            createdAt: getDate(date: "2018-01-07 17:08:01"),
+            updatedAt: getDate(date: "2018-04-12 21:37:25"),
+            countryId: 2,
+            country: CountryEntity(
+                id: 2,
+                name: "Afghanistan",
+                code: "AFG",
+                createdAt: getDate(date: "2018-01-07 17:08:01"),
+                updatedAt: getDate(date: "2018-01-07 17:08:01"),
+                continentId: 1
+            )
+        )
     }
     
-    private func createTwoCities(ids: [Int] = [0,1], names: [String] = ["Qandahar","Haag"]) -> [RMCity] {
+    private func createTwoCities(ids: [Int] = [0,1], names: [String] = ["Qandahar","Haag"]) -> [CityEntity] {
         return [
             createOneCity(id: ids[0], name: names[0]),
             createOneCity(id: ids[1], name: names[1])

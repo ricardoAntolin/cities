@@ -8,7 +8,7 @@
 
 import RxSwift
 
-public protocol LocalDataStore {
+public protocol LocalCityDataStore {
     func storeCities(_ cities: [CityEntity]) -> Completable
     func findAllCities() -> Observable<[CityEntity]>
     func findCitiesByNameLike(_ searchString: String) -> Observable<[CityEntity]>
