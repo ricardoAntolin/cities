@@ -11,7 +11,8 @@ import UIKit
 final class CityMapNavigator: BaseNavigator {
     
     func goToCityMap() {
-        let cityMapViewModel = CityMapViewModel()
+        let cityMapViewModel = CityMapViewModel(
+            findCitiesUseCase: useCaseProvider.findCitiesUseCaseUseCase)
 
         let cityMapViewController = CityMapViewController()
         cityMapViewController.viewModel = cityMapViewModel

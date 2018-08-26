@@ -7,30 +7,32 @@
 //
 
 import UIKit
+import MapKit
+import RxSwift
+import RxCocoa
+import RxMKMapView
 
-class CityMapViewController: UIViewController {
+class CityMapViewController: UIViewController, MKMapViewDelegate {
     var viewModel: CityMapViewModel!
+    let disposeBag = DisposeBag()
 
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bindViewModel()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func bindViewModel(){
+        let output = viewModel
+            .transform(input: CityMapViewModel.Input(
+                initTriger: mapView.rx.didFinishLoadingMap.asDriver()))
+        
+        output.cities.drive(mapView.rx.annotations)
+        .disposed(by: disposeBag)
+        
+        mapView.rx
+            .setDelegate(self)
+            .disposed(by: disposeBag)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

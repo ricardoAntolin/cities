@@ -9,23 +9,14 @@ import Domain
 import RxSwift
 
 final class UseCaseProvider {
-    let findAllCitiesUSeCase: FindAllCitiesUseCase
-    let updateCitiesPageUseCase: UpdateCitiesPageUseCase
-    let findCitiesByNameLikeUseCase: FindCitiesByNameLikeUseCase
+    let findCitiesUseCaseUseCase: FindCitiesUseCase
     let updateCitiesByNameLikeAndPageUseCase: UpdateCitiesByNameLikeAndPageUseCase
     
     init(repositoryProvider: RepositoryProvider,
          scheduler: ImmediateSchedulerType) {
-        self.findAllCitiesUSeCase =
-            FindAllCitiesUseCase(repository: repositoryProvider.cityRepository)
-        
-        self.updateCitiesPageUseCase =
-            UpdateCitiesPageUseCase(
-                repository: repositoryProvider.cityRepository,
-                scheduler: scheduler)
-        
-        self.findCitiesByNameLikeUseCase =
-            FindCitiesByNameLikeUseCase(repository: repositoryProvider.cityRepository)
+                
+        self.findCitiesUseCaseUseCase =
+            FindCitiesUseCase(repository: repositoryProvider.cityRepository)
         
         self.updateCitiesByNameLikeAndPageUseCase =
             UpdateCitiesByNameLikeAndPageUseCase(

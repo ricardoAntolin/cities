@@ -16,7 +16,6 @@
 		300F8CD2212BFD4A00366E82 /* square1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F8CD1212BFD4A00366E82 /* square1Tests.swift */; };
 		300F8CDD212BFD4A00366E82 /* square1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F8CDC212BFD4A00366E82 /* square1UITests.swift */; };
 		300F8CF8212BFDD600366E82 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300F8CEF212BFDD600366E82 /* Domain.framework */; };
-		300F8CFF212BFDD600366E82 /* FindAllCitiesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F8CFE212BFDD600366E82 /* FindAllCitiesUseCaseTests.swift */; };
 		300F8D01212BFDD600366E82 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 300F8CF1212BFDD600366E82 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		300F8D05212BFDD600366E82 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 300F8CEF212BFDD600366E82 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		300F8D1B212BFDEE00366E82 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300F8D12212BFDEE00366E82 /* Data.framework */; };
@@ -63,11 +62,8 @@
 		30B585A62131C0A000478FE8 /* LocalCityDataStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585A52131C0A000478FE8 /* LocalCityDataStoreMock.swift */; };
 		30B585A82131C0B700478FE8 /* RemoteCityDataStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585A72131C0B700478FE8 /* RemoteCityDataStoreMock.swift */; };
 		30B585AA2131C1B800478FE8 /* ExpectedResuls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585A92131C1B800478FE8 /* ExpectedResuls.swift */; };
-		30B585AC2131CA3500478FE8 /* FindAllCitiesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585AB2131CA3500478FE8 /* FindAllCitiesUseCase.swift */; };
-		30B585AE2131CA5D00478FE8 /* UpdateCitiesPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585AD2131CA5D00478FE8 /* UpdateCitiesPageUseCase.swift */; };
-		30B585B02131CA7900478FE8 /* FindCitiesByNameLikeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585AF2131CA7900478FE8 /* FindCitiesByNameLikeUseCase.swift */; };
+		30B585B02131CA7900478FE8 /* FindCitiesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585AF2131CA7900478FE8 /* FindCitiesUseCase.swift */; };
 		30B585B22131CAAD00478FE8 /* UpdateCitiesByNameLikeAndPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585B12131CAAD00478FE8 /* UpdateCitiesByNameLikeAndPageUseCase.swift */; };
-		30B585B42131D41D00478FE8 /* UpdateCitiesPageUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585B32131D41D00478FE8 /* UpdateCitiesPageUseCaseTest.swift */; };
 		30B585B62131D45800478FE8 /* FindCitiesByNameLikeUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585B52131D45800478FE8 /* FindCitiesByNameLikeUseCaseTest.swift */; };
 		30B585B82131D46400478FE8 /* UpdateCitiesByNameLikeAndPageUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585B72131D46400478FE8 /* UpdateCitiesByNameLikeAndPageUseCaseTest.swift */; };
 		30B585BB2131D4B200478FE8 /* CityRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B585BA2131D4B200478FE8 /* CityRepositoryMock.swift */; };
@@ -88,6 +84,15 @@
 		30BCEEB4212C89860092523D /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BCEEB3212C89860092523D /* response.json */; };
 		30BCEEB7212CA4EF0092523D /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCEEB6212CA4EF0092523D /* DateExtensions.swift */; };
 		30BCEEBA212CA7660092523D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCEEB9212CA7660092523D /* NetworkError.swift */; };
+		30E7A0912132FCB000A11F68 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7A0902132FCB000A11F68 /* UIScrollViewExtensions.swift */; };
+		30E7A0932133026400A11F68 /* RxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7A0922133026400A11F68 /* RxExtensions.swift */; };
+		30E7A096213302EB00A11F68 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7A095213302EB00A11F68 /* ErrorTracker.swift */; };
+		30E7A098213302FB00A11F68 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7A097213302FB00A11F68 /* ActivityIndicator.swift */; };
+		30E7A09B213305A300A11F68 /* UICity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7A09A213305A300A11F68 /* UICity.swift */; };
+		30E7A09D213305AD00A11F68 /* UICountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7A09C213305AD00A11F68 /* UICountry.swift */; };
+		30E7A0A02133062100A11F68 /* UIConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7A09F2133062100A11F68 /* UIConvertibleType.swift */; };
+		30E7A0A5213329E300A11F68 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7A0A3213329E300A11F68 /* CityTableViewCell.swift */; };
+		30E7A0A6213329E300A11F68 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E7A0A4213329E300A11F68 /* CityTableViewCell.xib */; };
 		42CAE80A0B9C23DB4DB75352 /* Pods_RealmDataProviderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F205ACE2864A3EDDD93B6AC2 /* Pods_RealmDataProviderTests.framework */; };
 		564D7FFB515BAF1E2CA0FCD1 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969CD8DD3372CC88F7CC07C2 /* Pods_Domain.framework */; };
 		80E529D12F62DF27038E24F6 /* Pods_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EECFE35914BB72EFC5D2A37 /* Pods_Data.framework */; };
@@ -240,7 +245,6 @@
 		300F8CF1212BFDD600366E82 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		300F8CF2212BFDD600366E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		300F8CF7212BFDD600366E82 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		300F8CFE212BFDD600366E82 /* FindAllCitiesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAllCitiesUseCaseTests.swift; sourceTree = "<group>"; };
 		300F8D00212BFDD600366E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		300F8D12212BFDEE00366E82 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		300F8D14212BFDEE00366E82 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
@@ -289,11 +293,8 @@
 		30B585A52131C0A000478FE8 /* LocalCityDataStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCityDataStoreMock.swift; sourceTree = "<group>"; };
 		30B585A72131C0B700478FE8 /* RemoteCityDataStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCityDataStoreMock.swift; sourceTree = "<group>"; };
 		30B585A92131C1B800478FE8 /* ExpectedResuls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectedResuls.swift; sourceTree = "<group>"; };
-		30B585AB2131CA3500478FE8 /* FindAllCitiesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAllCitiesUseCase.swift; sourceTree = "<group>"; };
-		30B585AD2131CA5D00478FE8 /* UpdateCitiesPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCitiesPageUseCase.swift; sourceTree = "<group>"; };
-		30B585AF2131CA7900478FE8 /* FindCitiesByNameLikeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCitiesByNameLikeUseCase.swift; sourceTree = "<group>"; };
+		30B585AF2131CA7900478FE8 /* FindCitiesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCitiesUseCase.swift; sourceTree = "<group>"; };
 		30B585B12131CAAD00478FE8 /* UpdateCitiesByNameLikeAndPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCitiesByNameLikeAndPageUseCase.swift; sourceTree = "<group>"; };
-		30B585B32131D41D00478FE8 /* UpdateCitiesPageUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCitiesPageUseCaseTest.swift; sourceTree = "<group>"; };
 		30B585B52131D45800478FE8 /* FindCitiesByNameLikeUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCitiesByNameLikeUseCaseTest.swift; sourceTree = "<group>"; };
 		30B585B72131D46400478FE8 /* UpdateCitiesByNameLikeAndPageUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCitiesByNameLikeAndPageUseCaseTest.swift; sourceTree = "<group>"; };
 		30B585BA2131D4B200478FE8 /* CityRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRepositoryMock.swift; sourceTree = "<group>"; };
@@ -314,6 +315,15 @@
 		30BCEEB3212C89860092523D /* response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
 		30BCEEB6212CA4EF0092523D /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		30BCEEB9212CA7660092523D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		30E7A0902132FCB000A11F68 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
+		30E7A0922133026400A11F68 /* RxExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxExtensions.swift; sourceTree = "<group>"; };
+		30E7A095213302EB00A11F68 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		30E7A097213302FB00A11F68 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		30E7A09A213305A300A11F68 /* UICity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICity.swift; sourceTree = "<group>"; };
+		30E7A09C213305AD00A11F68 /* UICountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICountry.swift; sourceTree = "<group>"; };
+		30E7A09F2133062100A11F68 /* UIConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConvertibleType.swift; sourceTree = "<group>"; };
+		30E7A0A3213329E300A11F68 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		30E7A0A4213329E300A11F68 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		3E3DDF866D1C310DAA23B670 /* Pods-square1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-square1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-square1UITests/Pods-square1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EECFE35914BB72EFC5D2A37 /* Pods_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		409D63F8F5928BF6E01137DD /* Pods-DomainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -542,8 +552,6 @@
 			isa = PBXGroup;
 			children = (
 				30B585B92131D49B00478FE8 /* Mocks */,
-				300F8CFE212BFDD600366E82 /* FindAllCitiesUseCaseTests.swift */,
-				30B585B32131D41D00478FE8 /* UpdateCitiesPageUseCaseTest.swift */,
 				30B585B52131D45800478FE8 /* FindCitiesByNameLikeUseCaseTest.swift */,
 				30B585B72131D46400478FE8 /* UpdateCitiesByNameLikeAndPageUseCaseTest.swift */,
 				300F8D00212BFDD600366E82 /* Info.plist */,
@@ -689,9 +697,7 @@
 		300F8D94212C317800366E82 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				30B585AB2131CA3500478FE8 /* FindAllCitiesUseCase.swift */,
-				30B585AD2131CA5D00478FE8 /* UpdateCitiesPageUseCase.swift */,
-				30B585AF2131CA7900478FE8 /* FindCitiesByNameLikeUseCase.swift */,
+				30B585AF2131CA7900478FE8 /* FindCitiesUseCase.swift */,
 				30B585B12131CAAD00478FE8 /* UpdateCitiesByNameLikeAndPageUseCase.swift */,
 			);
 			path = UseCases;
@@ -820,6 +826,9 @@
 		30B585C42131E35400478FE8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				30E7A0992133058A00A11F68 /* UIModels */,
+				30E7A094213302D800A11F68 /* Utils */,
+				30E7A08F2132FC9000A11F68 /* Extensions */,
 				30B585D52131EF6F00478FE8 /* ViewModelType.swift */,
 				30B585CB2131EDCA00478FE8 /* PortraitTabBarController.swift */,
 				30B585C92131ED9C00478FE8 /* BaseNavigator.swift */,
@@ -848,6 +857,7 @@
 		30B585C72131E39900478FE8 /* CityList */ = {
 			isa = PBXGroup;
 			children = (
+				30E7A0A2213329C700A11F68 /* CityCell */,
 				30B585D72131EF9100478FE8 /* CityListNavigator.swift */,
 				30B585D92131EFB500478FE8 /* CityListViewModel.swift */,
 				30B585DB2131EFCA00478FE8 /* CityListViewController.swift */,
@@ -860,9 +870,9 @@
 			isa = PBXGroup;
 			children = (
 				30B585CD2131EF1200478FE8 /* CityMapNavigator.swift */,
+				30B585D32131EF5F00478FE8 /* CityMapViewModel.swift */,
 				30B585CF2131EF4D00478FE8 /* CityMapViewController.swift */,
 				30B585D02131EF4D00478FE8 /* CityMapView.xib */,
-				30B585D32131EF5F00478FE8 /* CityMapViewModel.swift */,
 			);
 			path = CityMap;
 			sourceTree = "<group>";
@@ -881,6 +891,51 @@
 				30BCEEB9212CA7660092523D /* NetworkError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		30E7A08F2132FC9000A11F68 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30E7A0902132FCB000A11F68 /* UIScrollViewExtensions.swift */,
+				30E7A0922133026400A11F68 /* RxExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30E7A094213302D800A11F68 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				30E7A097213302FB00A11F68 /* ActivityIndicator.swift */,
+				30E7A095213302EB00A11F68 /* ErrorTracker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		30E7A0992133058A00A11F68 /* UIModels */ = {
+			isa = PBXGroup;
+			children = (
+				30E7A09E2133061200A11F68 /* Mappings */,
+				30E7A09A213305A300A11F68 /* UICity.swift */,
+				30E7A09C213305AD00A11F68 /* UICountry.swift */,
+			);
+			path = UIModels;
+			sourceTree = "<group>";
+		};
+		30E7A09E2133061200A11F68 /* Mappings */ = {
+			isa = PBXGroup;
+			children = (
+				30E7A09F2133062100A11F68 /* UIConvertibleType.swift */,
+			);
+			path = Mappings;
+			sourceTree = "<group>";
+		};
+		30E7A0A2213329C700A11F68 /* CityCell */ = {
+			isa = PBXGroup;
+			children = (
+				30E7A0A3213329E300A11F68 /* CityTableViewCell.swift */,
+				30E7A0A4213329E300A11F68 /* CityTableViewCell.xib */,
+			);
+			path = CityCell;
 			sourceTree = "<group>";
 		};
 		5E9E486D52F77AF9D0B7773B /* Pods */ = {
@@ -1262,6 +1317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E7A0A6213329E300A11F68 /* CityTableViewCell.xib in Resources */,
 				30B585D22131EF4D00478FE8 /* CityMapView.xib in Resources */,
 				300F8CC7212BFD4A00366E82 /* LaunchScreen.storyboard in Resources */,
 				300F8CC4212BFD4A00366E82 /* Assets.xcassets in Resources */,
@@ -1625,6 +1681,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxMKMapView/RxMKMapView.framework",
 				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
@@ -1640,6 +1697,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxMKMapView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
@@ -1787,16 +1845,24 @@
 				30B585972131B31D00478FE8 /* Application.swift in Sources */,
 				30B585DA2131EFB500478FE8 /* CityListViewModel.swift in Sources */,
 				30B585BF2131E2FC00478FE8 /* RepositoryProvider.swift in Sources */,
+				30E7A096213302EB00A11F68 /* ErrorTracker.swift in Sources */,
+				30E7A09B213305A300A11F68 /* UICity.swift in Sources */,
 				30B585CE2131EF1200478FE8 /* CityMapNavigator.swift in Sources */,
 				30B585C12131E30800478FE8 /* UseCaseProvider.swift in Sources */,
+				30E7A0912132FCB000A11F68 /* UIScrollViewExtensions.swift in Sources */,
+				30E7A09D213305AD00A11F68 /* UICountry.swift in Sources */,
 				30B585D42131EF5F00478FE8 /* CityMapViewModel.swift in Sources */,
+				30E7A0932133026400A11F68 /* RxExtensions.swift in Sources */,
 				30B585DD2131EFCA00478FE8 /* CityListViewController.swift in Sources */,
 				30B585CA2131ED9C00478FE8 /* BaseNavigator.swift in Sources */,
 				30B585D62131EF6F00478FE8 /* ViewModelType.swift in Sources */,
 				30B585CC2131EDCB00478FE8 /* PortraitTabBarController.swift in Sources */,
+				30E7A0A5213329E300A11F68 /* CityTableViewCell.swift in Sources */,
 				30B585D12131EF4D00478FE8 /* CityMapViewController.swift in Sources */,
 				300F8CBB212BFD4900366E82 /* AppDelegate.swift in Sources */,
 				30B585D82131EF9100478FE8 /* CityListNavigator.swift in Sources */,
+				30E7A098213302FB00A11F68 /* ActivityIndicator.swift in Sources */,
+				30E7A0A02133062100A11F68 /* UIConvertibleType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1822,11 +1888,9 @@
 			files = (
 				30B585992131BAC500478FE8 /* City.swift in Sources */,
 				30B5859B2131BAD000478FE8 /* Country.swift in Sources */,
-				30B585AC2131CA3500478FE8 /* FindAllCitiesUseCase.swift in Sources */,
 				30B585B22131CAAD00478FE8 /* UpdateCitiesByNameLikeAndPageUseCase.swift in Sources */,
 				30B5859D2131BAE200478FE8 /* PageableList.swift in Sources */,
-				30B585AE2131CA5D00478FE8 /* UpdateCitiesPageUseCase.swift in Sources */,
-				30B585B02131CA7900478FE8 /* FindCitiesByNameLikeUseCase.swift in Sources */,
+				30B585B02131CA7900478FE8 /* FindCitiesUseCase.swift in Sources */,
 				30B585942131B1FA00478FE8 /* CityRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1835,10 +1899,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30B585B42131D41D00478FE8 /* UpdateCitiesPageUseCaseTest.swift in Sources */,
 				30B585B62131D45800478FE8 /* FindCitiesByNameLikeUseCaseTest.swift in Sources */,
 				30B585BD2131D54200478FE8 /* ExpectedResults.swift in Sources */,
-				300F8CFF212BFDD600366E82 /* FindAllCitiesUseCaseTests.swift in Sources */,
 				30B585BB2131D4B200478FE8 /* CityRepositoryMock.swift in Sources */,
 				30B585B82131D46400478FE8 /* UpdateCitiesByNameLikeAndPageUseCaseTest.swift in Sources */,
 			);
@@ -2125,10 +2187,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = square1/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.square1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2145,10 +2204,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = square1/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.square1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2165,11 +2221,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = square1Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.square1Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2187,11 +2239,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = square1Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.square1Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2208,11 +2256,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = square1UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.square1UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2229,11 +2273,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = square1UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.square1UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2258,11 +2298,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2290,11 +2326,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2313,11 +2345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = DomainTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.DomainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2334,11 +2362,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = DomainTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.DomainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2363,11 +2387,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2395,11 +2415,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2418,11 +2434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = DataTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2439,11 +2451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = DataTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2468,11 +2476,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RealmDataProvider/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.RealmDataProvider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2500,11 +2504,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RealmDataProvider/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.RealmDataProvider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2523,11 +2523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = RealmDataProviderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.RealmDataProviderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2544,11 +2540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = RealmDataProviderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.RealmDataProviderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2573,11 +2565,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NetworkDataProvider/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.NetworkDataProvider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2605,11 +2593,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NetworkDataProvider/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.NetworkDataProvider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2628,11 +2612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = NetworkDataProviderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.NetworkDataProviderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -2649,11 +2629,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X6WDB9ND2Y;
 				INFOPLIST_FILE = NetworkDataProviderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rantolin.NetworkDataProviderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

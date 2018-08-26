@@ -13,7 +13,7 @@ import Data
 
 public final class CityNetworkDataRepository: RemoteCityDataStore {
     private let nwDataProvider: NWDataProvider<NWSearchResponse>
-    private let path = "city"
+    private let path = "/city"
     
     public init(baseURL: String){
         self.nwDataProvider = NWDataProvider(baseURL)
@@ -32,6 +32,6 @@ public final class CityNetworkDataRepository: RemoteCityDataStore {
             params["filter[0][name][contains]"] = filter
         }
         
-        return nwDataProvider.getItem(path).map { $0.asDataEntity() }
+        return nwDataProvider.getItem(path, parameters: params).map { $0.asDataEntity() }
     }
 }

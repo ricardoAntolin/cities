@@ -34,3 +34,4 @@ public struct City: Equatable {
         self.country = country
     }
 }
+

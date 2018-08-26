@@ -21,7 +21,7 @@ final class NWDataProvider<T: Codable> {
     }
     
     func getItems(_ path: String, parameters: [String: Any]? = nil) -> Single<[T]> {
-        let absolutePath = "\(baseURL)/\(path)"
+        let absolutePath = "\(baseURL)\(path)"
         return RxAlamofire
             .data(.get, absolutePath, parameters: parameters)
             .debug()
@@ -31,7 +31,9 @@ final class NWDataProvider<T: Codable> {
     }
     
     func getItem(_ path: String, parameters: [String: Any]? = nil) -> Single<T> {
-        let absolutePath = "\(baseURL)/\(path)"
+        let absolutePath = "\(baseURL)\(path)"
+        let url = NSURL(string: absolutePath)?.absoluteString
+        
         return RxAlamofire
             .data(.get, absolutePath, parameters: parameters)
             .debug()
@@ -42,7 +44,7 @@ final class NWDataProvider<T: Codable> {
     }
     
     func postItem(_ path: String, parameters: [String: Any]? = nil) -> Single<T> {
-        let absolutePath = "\(baseURL)/\(path)"
+        let absolutePath = "\(baseURL)\(path)"
         return RxAlamofire
             .data(.post, absolutePath, parameters: parameters)
             .debug()
@@ -52,7 +54,7 @@ final class NWDataProvider<T: Codable> {
     }
     
     func updateItem(_ path: String, parameters: [String: Any]? = nil) -> Single<T> {
-        let absolutePath = "\(baseURL)/\(path)"
+        let absolutePath = "\(baseURL)\(path)"
         return RxAlamofire
             .data(.put, absolutePath, parameters: parameters)
             .debug()
@@ -62,7 +64,7 @@ final class NWDataProvider<T: Codable> {
     }
     
     func deleteItem(_ path: String, parameters: [String: Any]? = nil) -> Single<T> {
-        let absolutePath = "\(baseURL)/\(path)"
+        let absolutePath = "\(baseURL)\(path)"
         return RxAlamofire
             .data(.delete, absolutePath, parameters: parameters)
             .debug()

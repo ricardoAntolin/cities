@@ -13,11 +13,11 @@ public struct PageableList<T> {
     public let perPage: Int
     public let total: Int
 
-    public init(items: [T],
-                currentPage: Int,
-                lastPage: Int,
-                perPage: Int,
-                total: Int) {
+    public init(items: [T] = [],
+                currentPage: Int = 0,
+                lastPage: Int = 0,
+                perPage: Int = 0,
+                total: Int = 0) {
         self.items = items
         self.currentPage = currentPage
         self.lastPage = lastPage

@@ -50,8 +50,8 @@ struct NWCity: Codable, Equatable, DataConvertibleType {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(Int.self, forKey: .id)
         name = try values.decode(String.self, forKey: .name)
-        lat = try values.decode(Double.self, forKey: .lat)
-        lng = try values.decode(Double.self, forKey: .lng)
+        lat = try values.decodeIfPresent(Double.self, forKey: .lat) ?? 0.0
+        lng = try values.decodeIfPresent(Double.self, forKey: .lng) ?? 0.0
         createdAt = try Date(dateString: values.decode(String.self, forKey: .createdAt))
         updatedAt = try Date(dateString: values.decode(String.self, forKey: .updatedAt))
         countryId = try values.decodeIfPresent(Int.self, forKey: .countryId)

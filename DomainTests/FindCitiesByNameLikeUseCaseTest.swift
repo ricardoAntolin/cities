@@ -14,7 +14,7 @@ import XCTest
 
 class FindCitiesByNameLikeUseCaseTest: XCTestCase {
     
-    let useCase = FindCitiesByNameLikeUseCase(repository: CityRepositoryMock())
+    let useCase = FindCitiesUseCase(repository: CityRepositoryMock())
     
     func testShouldRetrieveCityList() {
         let result = try! useCase.execute(searchString: "har").toBlocking().first()

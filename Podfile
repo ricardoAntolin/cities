@@ -10,6 +10,7 @@ def reactive_cocoa
     pod 'RxCocoa',    '~> 4.0'
     pod 'RxDataSources'
     pod 'RxViewController'
+    pod 'RxMKMapView'
 end
 
 def realm

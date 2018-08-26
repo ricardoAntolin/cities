@@ -19,7 +19,7 @@ final public class UpdateCitiesByNameLikeAndPageUseCase {
         self.scheduler = scheduler
     }
     
-    public func execute(page: Int, searchString: String) -> Single<PageableList<City>> {
+    public func execute(page: Int, searchString: String?) -> Single<PageableList<City>> {
         return repository.updateCitiesByNameLike(page: page, searchString: searchString)
             .observeOn(scheduler)
             .do(onSuccess: { self.storeResults(cities: $0.items) })

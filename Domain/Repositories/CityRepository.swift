@@ -11,6 +11,5 @@ public protocol CityRepository {
     func findAllCities() -> Observable<[City]>
     func storeCities(_ cities: [City]) -> Completable
     func findCitiesByNameLike(_ searchString: String) -> Observable<[City]>
-    func updateCitiesByPage(_ page: Int) -> Single<PageableList<City>>
-    func updateCitiesByNameLike(page: Int, searchString: String) -> Single<PageableList<City>>
+    func updateCitiesByNameLike(page: Int, searchString: String?) -> Single<PageableList<City>>
 }

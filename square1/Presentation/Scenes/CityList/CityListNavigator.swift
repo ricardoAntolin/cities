@@ -11,7 +11,10 @@ import UIKit
 final class CityListNavigator: BaseNavigator {
     
     func goToCityList(){
-        let cityListViewModel = CityListViewModel()
+        let cityListViewModel =
+            CityListViewModel(
+                findCitiesUseCase: useCaseProvider.findCitiesUseCaseUseCase,
+                updateCitiesByNameLikeAndPageUseCase: useCaseProvider.updateCitiesByNameLikeAndPageUseCase)
         
         let cityListViewController = CityListViewController()
         cityListViewController.viewModel = cityListViewModel

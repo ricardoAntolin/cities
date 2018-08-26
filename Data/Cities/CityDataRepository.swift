@@ -32,12 +32,7 @@ public final class CityDataRepository: CityRepository {
             .map{ $0.map{ $0.asDomainModel() } }
     }
     
-    public func updateCitiesByPage(_ page: Int) -> Single<PageableList<City>> {
-        return remoteDataStore.searchCities(includeCountry: true, page: page, searchString: nil)
-            .map{ $0.asDomainModel() }
-    }
-    
-    public func updateCitiesByNameLike(page: Int, searchString: String) -> Single<PageableList<City>> {
+    public func updateCitiesByNameLike(page: Int, searchString: String?) -> Single<PageableList<City>> {
         return remoteDataStore.searchCities(includeCountry: true, page: page, searchString: searchString)
             .map{ $0.asDomainModel() }
     }
